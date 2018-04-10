@@ -1,0 +1,26 @@
+"""安装brew"""
+	 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+"""安装git"""
+	brew install git
+
+"""设置git自动补全"""
+	1.brew install bash-completion
+	2.将下面代码添加到~/.bash_profile（如果没有该文件，新建一个） 注: ~/ 表示你mac的个人目录
+		if [ -f ~/.git-completion.bash ]; then
+			. ~/.git-completion.bash
+		fi
+	3. cp /usr/local/etc/bash_completion.d/git-completion.bash ~/.git-completion.bash
+	4.在~/.bashrc文件（该目录下如果没有，新建一个）中添加下边的内容
+		source ~/.git-completion.bash
+	5.重启终端
+
+"""安装cmake"""
+	brew install cmake
+
+"""编译YouCompleteMe"""
+	进入YouCompleteMe目录
+	./install.py --clang-completer
+
+"""密码免登陆"""
+	1.终端运行 ssh-keygen -t rsa 不要输入密码，直接按enter/return
+	2.在目录 ~/.ssh下生成几个文件，把id_rsa.pub 中内容拷贝到要免密登陆的机器的~/.ssh/authorized_keys(如果没有，先创建) 文件中
