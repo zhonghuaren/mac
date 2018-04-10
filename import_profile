@@ -24,3 +24,6 @@
 """密码免登陆"""
 	1.终端运行 ssh-keygen -t rsa 不要输入密码，直接按enter/return
 	2.在目录 ~/.ssh下生成几个文件，把id_rsa.pub 中内容拷贝到要免密登陆的机器的~/.ssh/authorized_keys(如果没有，先创建) 文件中
+
+"""安装iina"""
+	brew install caskroom/cask/iina
