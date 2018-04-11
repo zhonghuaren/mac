@@ -27,3 +27,9 @@
 
 """安装iina"""
 	brew install caskroom/cask/iina
+
+"""mac 默认ctags是Xcode版的，没有-R参数，可以重新安装ctags"""
+	brew install ctags
+
+"""ssh 超时断接"""
+	向 ~/.ssh/config 写入ServerAliveInterval 60
